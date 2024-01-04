@@ -7,7 +7,7 @@ enum class ErrorCode(
     val message: String
 ) {
     ERR_INTERNAL_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, "서버와의 통신이 원활하지 않습니다."),
-    NOT_FOUND(HttpStatus.NOT_FOUND, "찾을 수 없는 경로입니다."),
+    NOT_FOUND(HttpStatus.NOT_FOUND, "찾을 수 없습니다."),
 }
 
 
