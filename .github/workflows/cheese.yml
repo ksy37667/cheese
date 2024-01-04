@@ -57,9 +57,9 @@ jobs:
           key: ${{ secrets.KEY }}
           envs: GITHUB_SHA
           script: |
-              cd /home/ubuntu/cheese
-              docker-compose down
-              docker pull ${{ secrets.DOCKER_REPO }}/cheese
-              docker-compose up -d
+            sudo docker rm -f $(docker ps -qa)
+            sudo docker pull ${{ secrets.DOCKER_REPO }}/cheese
+            docker-compose up -d
+            docker image prune -f
 
 
